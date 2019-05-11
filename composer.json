@@ -1,0 +1,19 @@
+{
+    "name": "spudro/zaloopa",
+    "description": "My attempt to implement async I/O with use Reactor pattern.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Smolyakov",
+            "email": "mompizzapls@mail.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zaloopa\\": "src\\"
+        }
+    }
+}
