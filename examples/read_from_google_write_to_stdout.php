@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Zaloopa\SelectEventLoop;
-
+use EventLoop\SelectEventLoop;
 
 
 const NO_BLOCKING = false;
@@ -34,6 +33,7 @@ $selector->registerReadStream($clientStream, static function ($stream) use (&$bu
     $content = stream_get_contents($stream, BUFF_SIZE_1024);
     $buffer = $content;
     $selector->removeReadStream($stream);
+    $buffer = null;
 });
 
 $selector->registerWriteStream($stdout, static function ($stream) use (&$buffer) {
@@ -47,7 +47,6 @@ $selector->registerWriteStream($stdout, static function ($stream) use (&$buffer)
 
 $selector->run();
 
-fclose($stdin);
 fclose($stdout);
 fclose($clientStream);
 

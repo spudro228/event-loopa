@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace Zaloopa;
+namespace EventLoop;
 
 class SelectEventLoop
 {

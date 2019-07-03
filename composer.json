@@ -1,5 +1,5 @@
 {
-    "name": "spudro/zaloopa",
+    "name": "spudro/event-loopa",
     "description": "My attempt to implement async I/O with use Reactor pattern.",
     "type": "library",
     "authors": [
